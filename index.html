@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Capstone One Proposal</title>
+</head>
+<body>
+    <h1>Capstone One Proposal</h1>
+        <h2>CalculTube</h2>
+        <p>
+            For any high school calculus topic, users can nominate and
+            vote on YouTube videos that they think best explains the
+            topic. (Think of it like Reddit)
+        </p>
+        <ul>
+            <li>
+                List of topics are manually added based on the AP calculus
+                standards (BC-only topics are tagged accordingly).
+            </li>
+            <li>
+                Can have different categories to vote on: best basics,
+                best in depth, and funniest.
+            </li>
+        </ul>
+        <h3>Structure</h3>
+        <h4>Database Tables</h4>
+        <ul>
+            <li>users
+                <ul>
+                    <li>one-to-many with videos for nomination</li>
+                    <li>many-to-many with videos for favorites</li>
+                </ul>
+            </li>
+            <li>topics
+                <ul>
+                    <li>many-to-many with videos for relevance</li>
+                </ul>
+            </li>
+            <li>videos</li>
+            <li>favorites
+                <ul>
+                    <li>secondary between users and videos</li>
+                </ul>
+            </li>
+            <li>
+                topics-videos
+                <ul>
+                    <li>secondary between topics and videos</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Pages</h4>
+        <ul>
+            <li>
+                An about page for how the site functions. It also contain resources
+                such as links to practice problems.
+            </li>
+            <li>
+                Various user forms and pages.
+            </li>
+            <li>
+                A page for each topic with info from the College Board
+                website. Nominated videos' title show up here for votes
+                and reports. Video title links to a page for the video
+            </li>
+            <li>
+                Each video has a page with the video and details about
+                the video. User can vote on the page and report irrelevant
+                videos.
+            </li>
+        </ul>
+        <h4>Misc</h4>
+            <p>Use Flask-Admin for moderation and initial setup for topics.</p>
+    <h3>API</h3>
+        <p>https://developers.google.com/youtube/v3/getting-started</p>
+</body>
+</html>
